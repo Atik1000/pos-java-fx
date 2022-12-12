@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handleMouseAction" prefHeight="600.0" prefWidth="756.0" style="-fx-background-color: #f6b93b;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quicklookapplication.Category.HandleLogin">
+    <children>
+        <VBox layoutX="204.0" layoutY="186.0" prefHeight="300.0" prefWidth="71.0" spacing="22.0">
+            <children>
+                <Label lineSpacing="3.0" prefHeight="20.0" prefWidth="37.0" text="Email" />
+                <Label text="Password" />
+            </children>
+        </VBox>
+        <VBox layoutX="278.0" layoutY="184.0" prefHeight="161.0" prefWidth="264.0" spacing="14.0">
+            <children>
+                <TextField fx:id="email" prefHeight="0.0" prefWidth="249.0" />
+                <PasswordField fx:id="password">
+               <effect>
+                  <Glow />
+               </effect></PasswordField>
+            </children>
+         <effect>
+            <Glow />
+         </effect>
+        </VBox>
+        <Button fx:id="login" layoutX="371.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: #3498db;" text="Login" />
+        <Button fx:id="goBackToHomePage" layoutX="363.0" layoutY="460.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #2ecc71;" text="GO BACK" />
+    </children>
+</AnchorPane>
