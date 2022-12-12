@@ -35,6 +35,9 @@ public class HomeController implements Initializable {
     private Button saleReport;
 
     @FXML
+    private Button login;
+
+    @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to QUICK LOOK Application!");
     }
@@ -57,6 +60,8 @@ public class HomeController implements Initializable {
             purchaseReport(event);
         } else if (event.getSource() == saleReport) {
             saleReport(event);
+        } else if (event.getSource() == login) {
+            logOut(event);
         }
     }
 
@@ -129,6 +134,15 @@ public class HomeController implements Initializable {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         Stage primaryStage = (Stage) saleReport.getScene().getWindow();
         primaryStage.setTitle("Sale Report");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    public void logOut(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Stage primaryStage = (Stage) login.getScene().getWindow();
+        primaryStage.setTitle("Login");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
